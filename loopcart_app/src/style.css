@@ -212,3 +212,29 @@ p {
     top: 68%;
     left: 70%;
 }
+
+.bottom-nav {
+    width: 100vw;
+    height: 72px;
+    background-color: var(--color-gray-800);
+    position: fixed;
+    left: 0%;
+    bottom: 0vh;
+}
+
+.bottom-nav-container {
+    width: 100vw;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-12);
+}
+
+.bottom-nav-button {
+    min-width: 50px;
+    height: 50px;
+    background-color: var(--color-brand-blueberry);
+    border: none;
+    border-radius: var(--br-sm);
+}
