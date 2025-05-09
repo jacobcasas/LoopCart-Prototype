@@ -238,3 +238,59 @@ p {
     border: none;
     border-radius: var(--br-sm);
 }
+
+/* SHOPPING CART */
+
+.list-name-searchbar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-11);
+}
+
+.search-item {
+    margin: 0 auto;
+}
+
+#searchbar-shoplist {
+    border: 2px solid var(--color-gray-800);
+    border-radius: var(--br-2xl);
+    padding: 0 var(--spacing-2);
+    width: 350px;
+    height: 51px;
+}
+
+.cart-items {
+    display: none;
+}
+
+.subtotal-and-save {
+    background-color: var(--color-gray-800);
+    width: 100vw;
+    height: 120px;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-3);
+}
+
+.subtotal-price {
+    color: var(--color-gray-50);
+}
+
+.save-button {
+    width: fit-content;
+    height: fit-content;
+    color: var(--color-gray-50);
+    background-color: var(--color-brand-guava);
+    border: none;
+    border-radius: var(--br-2xl);
+    padding: var(--spacing-2) var(--spacing-5);
+    box-shadow: var(--color-gray-900) 0 4px 5px;
+}
+
+.button-text {
+    font-weight: 800;
+}
