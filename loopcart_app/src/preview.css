@@ -1,13 +1,14 @@
 .phone-frame {
-    width: 375px;
-    height: 712px;
+    display: flex;
+    width: 400px;
+    height: 916px;
     border: 12px solid #000;
     border-radius: 40px;
     box-shadow: 0 0 20px rgba(0,0,0,0.25);
     overflow: hidden;
     background: #f1f1f1;
     position: relative;
-    left: 35%;
+    left: 40%;
 }
 
 .phone-frame::before {

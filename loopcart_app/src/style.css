@@ -68,11 +68,36 @@ h1, h2, h3, h4, h5, h6 {
     --color-brand-mushroom: #D29B64;
     --color-brand-dragonfruit: #B364D2;
 
+    --br-sm: 4px;
+    --br-md: 8px;
+    --br-lg: 16px;
+    --br-xl: 32px;
+    --br-2xl: 64px;
+    --br-3xl: 128px;
    
+    --spacing-half: 4px;
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-4: 32px;
+    --spacing-5: 40px;
+    --spacing-6: 48px;
+    --spacing-7: 56px;
+    --spacing-8: 64px;
+    --spacing-9: 72px;
+    --spacing-10: 80px;
+    --spacing-11: 88px;
+    --spacing-12: 96px;
+    --spacing-13: 104px;
 }
 
+/* GENERAL STYLES */
 html {
     font-family: "Work sans", sans-serif;
+}
+
+body {
+    margin: 50px 10px;
 }
 
 h1 {
@@ -120,4 +145,70 @@ p {
     font-size: 0.625rem;
     letter-spacing: 6%;
     color: var(--color-gray-600);
+}
+
+/* HOME PAGE */
+.top-nav-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-nav {
+    display: flex;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.hero-image-container {
+    display: grid;
+    margin-top: var(--spacing-5);
+}
+
+.hero-image-ph {
+    width: 380px;
+    height: 160px;
+    background-color: var(--color-brand-mint);
+    border-radius: var(--br-lg);
+}
+
+.home-item-suggestions {
+    margin-top: var(--spacing-8);
+}
+
+.item-carousel {
+    display: flex;
+    gap: var(--spacing-2);
+    overflow-x: auto;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    /*scrollbar-width: none;*/
+}
+
+.item-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    min-width: 96px;
+    height: 96px;
+    border-radius: var(--br-sm);
+    background-color: var(--color-gray-400);
+    border: none;
+}
+
+.add-button {
+    display: flex;
+    min-width: 24px;
+    height: 24px;
+    border-radius: var(--br-xl);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: var(--color-gray-50);
+    background-color: var(--color-gray-800);
+    position: relative;
+    top: 68%;
+    left: 70%;
 }
