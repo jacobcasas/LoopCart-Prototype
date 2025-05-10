@@ -18,15 +18,22 @@
             <input type="text" placeholder="search..." id="searchbar-shoplist" class="small-text">
         </div>
     </div>
-    <div class="cart-items"></div>
+    <div class="cart-items">
+        <!-- the case before any items are added -->
+        <p class="empty-state-prompt-shopcart bold">
+            No items yet. <br> Try searching "<span id="search-suggestion-empty-state"></span>".
+        </p>
+    </div>
     <div class="subtotal-and-save">
         <div class="subtotal-price">
             <h5>Subtotal: $</h5>
             <h5 id="price-shoplist"></h5>
         </div>
-        <button class="save-button">
-            <span class="button-text">Save to List</span>
-        </button>
+        <a href="save-to-list-success.html">
+            <button class="save-button">
+                <span class="button-text">Save to List</span>
+            </button>
+        </a>
     </div>
 </body>
 </html>

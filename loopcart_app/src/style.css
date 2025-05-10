@@ -147,6 +147,18 @@ p {
     color: var(--color-gray-600);
 }
 
+.bold {
+    font-weight: 500;
+}
+
+.bolder {
+    font-weight: 600;
+}
+
+.boldest {
+    font-weight: 800;
+}
+
 /* HOME PAGE */
 .top-nav-wrap {
     display: flex;
@@ -260,7 +272,15 @@ p {
 }
 
 .cart-items {
-    display: none;
+    /* display: none; */
+}
+
+.empty-state-prompt-shopcart {
+    text-align: center;
+    height: fit-content;
+    position: absolute;
+    width: 380px;
+    top: 50%;
 }
 
 .subtotal-and-save {
