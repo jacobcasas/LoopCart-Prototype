@@ -159,6 +159,17 @@ p {
     font-weight: 800;
 }
 
+.cta-button-primary {
+    width: fit-content;
+    height: fit-content;
+    color: var(--color-gray-50);
+    background-color: var(--color-brand-guava);
+    border: none;
+    border-radius: var(--br-2xl);
+    padding: var(--spacing-2) var(--spacing-5);
+    box-shadow: var(--color-gray-900) 0 4px 5px;
+}
+
 /* HOME PAGE */
 .top-nav-wrap {
     display: flex;
@@ -300,17 +311,15 @@ p {
     color: var(--color-gray-50);
 }
 
-.save-button {
-    width: fit-content;
-    height: fit-content;
-    color: var(--color-gray-50);
-    background-color: var(--color-brand-guava);
-    border: none;
-    border-radius: var(--br-2xl);
-    padding: var(--spacing-2) var(--spacing-5);
-    box-shadow: var(--color-gray-900) 0 4px 5px;
-}
+/* SUCCESS SCREEN - SAVE TO LIST */
 
-.button-text {
-    font-weight: 800;
+.success-screen-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
 }
