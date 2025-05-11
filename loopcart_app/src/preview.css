@@ -1,26 +1,25 @@
 .phone-frame {
     display: flex;
-    width: 400px;
-    height: 916px;
+    width: 440px;
+    height: 956px;
     border: 12px solid #000;
     border-radius: 40px;
     box-shadow: 0 0 20px rgba(0,0,0,0.25);
     overflow: hidden;
     background: #f1f1f1;
-    position: relative;
-    left: 40%;
+    margin: 0 auto;
 }
 
 .phone-frame::before {
     content: '';
     position: absolute;
-    top: 10px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 6px;
-    background: #333;
-    border-radius: 3px;
+    width: 120px;
+    height: 25px;
+    background: #000;
+    border-radius: 20px;
 }
 
 .app-content {
