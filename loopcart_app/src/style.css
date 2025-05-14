@@ -202,10 +202,11 @@ p {
 }
 
 .hero-image-ph {
-    width: 380px;
+    width: 420px;
     height: 160px;
     background-color: var(--color-brand-mint);
     border-radius: var(--br-lg);
+    
 }
 
 .home-item-suggestions {
