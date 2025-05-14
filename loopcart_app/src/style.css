@@ -374,6 +374,12 @@ p {
 }
 
 /* PROFILE PAGE */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
 .name-and-settings-wrapper {
     display: flex;
     justify-content: space-between;
@@ -406,9 +412,15 @@ p {
     gap: var(--spacing-1);
 }
 
+.recent-activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
 .activity-post-container {
     display: flex;
-    align-items: ;
+    gap: var(--spacing-half);
 }
 
 .icon-post {
