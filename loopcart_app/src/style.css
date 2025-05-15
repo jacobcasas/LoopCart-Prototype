@@ -190,10 +190,14 @@ p {
 
 .left-nav {
     display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
 }
 
 .right-nav {
     display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
 }
 
 .hero-image-container {
@@ -270,9 +274,8 @@ p {
 .bottom-nav-button {
     min-width: 50px;
     height: 50px;
-    background-color: var(--color-brand-blueberry);
     border: none;
-    border-radius: var(--br-sm);
+    background-color: transparent;
 }
 
 /* SHOPPING CART */
@@ -363,6 +366,9 @@ p {
 }
 
 .edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 74px;
     height: 74px;
     background-color: var(--color-gray-200);
@@ -372,6 +378,11 @@ p {
     position: fixed;
     left: 80vw;
     top: 85vh;
+}
+
+.edit-button-icon {
+    width: 45px;
+    height: 45px;
 }
 
 /* PROFILE PAGE */
