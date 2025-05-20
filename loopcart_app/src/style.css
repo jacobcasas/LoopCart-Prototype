@@ -145,14 +145,6 @@ html {
 
 body {
     margin: 75px 10px;
-    overflow: auto;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-body::-webkit-scrollbar {
-    display: none;
 }
 
 h1 {
