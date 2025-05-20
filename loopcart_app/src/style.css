@@ -199,7 +199,6 @@ hr {
 .xs-text {
     font-size: 0.625rem;
     letter-spacing: 6%;
-    color: var(--color-gray-600);
 }
 
 .bold {
@@ -256,6 +255,13 @@ hr {
     width: 223px;
 }
 
+.truncated-sm {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 96px;
+}
+
 .med-img {
     width: 48px;
     height: 48px;
@@ -281,16 +287,12 @@ hr {
 }
 
 .hero-image-container {
-    display: grid;
+    display: flex;
+    gap: var(--spacing-2);
+    overflow-x: auto;
+    cursor: grab;
+    scrollbar-width: none;
     margin-top: var(--spacing-5);
-}
-
-.hero-image-ph {
-    width: 420px;
-    height: 160px;
-    background-color: var(--color-brand-mint);
-    border-radius: var(--br-lg);
-    
 }
 
 .home-item-suggestions {
@@ -304,7 +306,6 @@ hr {
     width: 96px;
     height: 96px;
     border-radius: var(--br-md);
-    background-color: var(--color-gray-400);
     border: none;
     position: relative;
 }
