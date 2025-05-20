@@ -145,6 +145,14 @@ html {
 
 body {
     margin: 75px 10px;
+    overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
@@ -569,6 +577,13 @@ hr {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-5);
+    overflow: auto;
+
+    scrollbar-width: none;
+}
+
+.setting-page-container::-webkit-scrollbar {
+    display: none;
 }
 
 .title-and-back {
@@ -584,10 +599,11 @@ hr {
 }
 
 .setting-wrapper {
-    width: 420px;
+    width: 400px;
     padding: 5px 20px;
     background-color: var(--color-gray-200);
     border-radius: var(--br-md);
+    margin: 0 auto;
 }
 
 .setting-box {
