@@ -20,15 +20,17 @@
       <img src="src/icons/magnifying-glass.svg" alt="." width="24px" height="24px">
     </div>
   </div>
-  <div class="hero-image-container">
-    <img src="src/imgs/LoopCart+hero.svg" alt="loopcart+ hero image">
-    <img src="src/imgs/Late-night-snack-hero.svg" alt="late night hero image">
+  <div class="hero-section">
+    <div class="hero-image-container">
+      <img src="src/imgs/LoopCart+hero.svg" alt="loopcart+ hero image" class="hero-image">
+      <img src="src/imgs/Late-night-snack-hero.svg" alt="late night hero image" class="hero-image">
+    </div>
   </div>
   <div class="home-item-suggestions">
       <div class="title-and-items">
         <h4>A Healthier Breakfast</h4>
         <div class="item-carousel">
-          <div class="item-card-sm">
+          <div class="item-card-sm" data-id="2">
             <div class="item-picture">
               <img src="src/imgs/strawberries.jpeg" alt="" style="border-radius: var(--br-md);">
               <button class="add-button-notification">+</button>
@@ -39,7 +41,7 @@
               <p class="xs-text gray-400">2 oz.</p>
             </div>
           </div>
-          <div class="item-card-sm">
+          <div class="item-card-sm" data-id="3">
             <div class="item-picture">
               <img src="src/imgs/avacados.jpg" alt="" style="border-radius: var(--br-md);">
               <button class="add-button-notification">+</button>
@@ -50,7 +52,7 @@
               <p class="xs-text gray-400">1 lb</p>
             </div>
           </div>
-          <div class="item-card-sm">
+          <div class="item-card-sm" data-id="1">
             <div class="item-picture">
               <img src="src/imgs/blueberries.jpg" alt="" style="border-radius: var(--br-md);">
               <button class="add-button-notification">+</button>
@@ -96,11 +98,10 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="title-and-items">
-      <h4>Cosmetics You Need To Try</h4>
-      <div class="item-carousel">
-        <div class="item-card-sm">
+      <div class="title-and-items">
+    <h4>Cosmetics You Need To Try</h4>
+    <div class="item-carousel">
+      <div class="item-card-sm" data-id="4">
           <div class="item-picture" style="background-color: #FFF;">
             <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
             <button class="add-button-notification">+</button>
@@ -110,8 +111,8 @@
             <p class="small-text truncated-sm">Genesis Sunscreen</p>
             <p class="xs-text gray-400">1 ct</p>
           </div>
-        </div>
-        <div class="item-card-sm">
+      </div>
+      <div class="item-card-sm" data-id="5">
           <div class="item-picture">
             <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
             <button class="add-button-notification">+</button>
@@ -121,8 +122,8 @@
             <p class="small-text truncated-sm">Genesis Nail Polish</p>
             <p class="xs-text gray-400">1 ct</p>
           </div>
-        </div>
-        <div class="item-card-sm">
+      </div>
+      <div class="item-card-sm">
           <div class="item-picture" style="background-color: #FFF;">
             <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
             <button class="add-button-notification">+</button>
@@ -132,8 +133,8 @@
             <p class="small-text truncated-sm">Genesis Sunscreen</p>
             <p class="xs-text gray-400">1 ct</p>
           </div>
-        </div>
-        <div class="item-card-sm">
+      </div>
+      <div class="item-card-sm">
           <div class="item-picture">
             <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
             <button class="add-button-notification">+</button>
@@ -143,8 +144,8 @@
             <p class="small-text truncated-sm">Genesis Nail Polish</p>
             <p class="xs-text gray-400">1 ct</p>
           </div>
-        </div>
-        <div class="item-card-sm">
+      </div>
+      <div class="item-card-sm">
           <div class="item-picture" style="background-color: #FFF;">
             <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
             <button class="add-button-notification">+</button>
@@ -154,8 +155,8 @@
             <p class="small-text truncated-sm">Genesis Sunscreen</p>
             <p class="xs-text gray-400">1 ct</p>
           </div>
-        </div>
-        <div class="item-card-sm">
+      </div>
+      <div class="item-card-sm">
           <div class="item-picture">
             <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
             <button class="add-button-notification">+</button>
@@ -165,9 +166,9 @@
             <p class="small-text truncated-sm">Genesis Nail Polish</p>
             <p class="xs-text gray-400">1 ct</p>
           </div>
-        </div>
       </div>
     </div>
+      </div>
   </div>
   <div class="bottom-nav">
     <div class="bottom-nav-container">
@@ -199,4 +200,7 @@
     </div>
   </div>
 </body>
+
+<script type="module" src="src/js/ui.js"></script>
+<script src="src/js/product-page.js"></script>
 </html>
