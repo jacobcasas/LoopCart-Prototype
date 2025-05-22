@@ -150,26 +150,31 @@ body {
 h1 {
     font-size: 3rem;
     letter-spacing: -4%;
+    line-height: normal;
 }
 
 h2 {
     font-size: 2.3rem;
     letter-spacing: -4%;
+    line-height: normal;
 }
 
 h3 {
     font-size: 2.075rem;
     letter-spacing: -3.2%;
+    line-height: normal;
 }
 
 h4 {
     font-size: 1.725rem;
     letter-spacing: -2.8%;
+    line-height: normal;
 }
 
 h5 {
     font-size: 1.4375rem;
     letter-spacing: -2%;
+    line-height: normal;
 }
 
 h6 {
@@ -670,6 +675,7 @@ hr {
 }
 
 #product-details {
+    max-height: 196px;
     display: flex;
     flex-direction: row;
     gap: var(--spacing-2);
@@ -695,4 +701,42 @@ hr {
 
 .discount {
     text-decoration: line-through;
+}
+
+.quantity-container {
+    position: fixed;
+    width: 100vw;
+    height: 109px;
+    background-color: var(--color-gray-800);
+    bottom: 0vh;
+    left: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quantity-controller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 192px;
+    height: 55px;
+    background-color: var(--color-gray-200);
+    border-radius: var(--br-2xl);
+    padding: 0 16px;
+}
+
+.change-quantity {
+    border: none;
+    background-color: transparent;
+}
+
+#add-to-list {
+    width: 183px;
+    height: 55px;
+    background-color: var(--color-brand-guava);
+    color: var(--color-gray-50);
+    border: none;
+    border-radius: var(--br-xl);
+    box-shadow: 0 4px 4px var(--color-gray-900);
 }

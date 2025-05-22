@@ -12,7 +12,7 @@ export const products = [
     {
         id: 2,
         title: "Strawberries",
-        img: "",
+        img: "src/imgs/strawberries.jpeg",
         source: "Charmington Farms",
         price: "$3.50",
         discount: "",
@@ -22,7 +22,7 @@ export const products = [
     {
         id: 3,
         title: "Avacados (large)",
-        img: "",
+        img: "src/imgs/avacados.jpg",
         source: "Charmington Farms",
         price: "$5.50",
         discount: "",
@@ -32,8 +32,8 @@ export const products = [
     {
         id: 4,
         title: "Genesis Sunscreen",
-        img: "",
-        source: "Genesis",
+        img: "src/imgs/sunscreen.png",
+        source: "Genesis Cosmetics",
         price: "$4.50",
         discount: "",
         color: "blueberry",
@@ -41,9 +41,9 @@ export const products = [
     },
     {
         id: 5,
-        title: "Genesis NailPolish (pink)",
-        img: "",
-        source: "Genesis",
+        title: "Genesis NailPolish",
+        img: "src/imgs/nail-polish.jpg",
+        source: "Genesis Cosmetics",
         price: "$2.50",
         discount: "",
         color: "blueberry",
