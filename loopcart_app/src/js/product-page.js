@@ -12,17 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (product) {
     container.innerHTML = `
-      <img src="${product.img}" alt="${product.title}">
+      <img src="${product.img}" alt="${product.title}" class="product-img">
       <div class="product-content">
         <div class="title-and-size">
           <h3 class="${product.color}">${product.title}</h3>
           <p class="small-text">${product.size}</p>
         </div>
-        <div class="price">
-          <h6 class="guava">${product.price}</h6>
-          <p class="xs-text">${product.discount}</p>
-        </div>
-        <p class="boldest gray-600">${product.source}</p>
+        <div class="price-and-source">
+            <div class="price">
+                <h6 class="guava">${product.price}</h6>
+                <p class="xs-text discount">${product.discount}</p>
+             </div>
+            <p class="boldest gray-600">${product.source}</p>
+        </div
       </div>
     `;
   } else {

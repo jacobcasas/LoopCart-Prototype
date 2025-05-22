@@ -10,9 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="product-details"></div>
+    <div class="product-page-container">
+        <button class="back-button">&lt;</button>
+        <div id="product-details"></div>
+    </div>
+    <div class="quantity-container">
+        <div class="quantity-controller">
+            <button id="subtract">-</button>
+            <p class="boldest" id="quantity">0</p>
+            <button id="add">+</button>
+        </div>
+        <button class="boldest gray-50" id="add-to-list">Add to list</button>
+    </div>
 
     <script type="module" src="src/js/api.js"></script>
     <script type="module" src="src/js/product-page.js"></script>
+    <script type="module" src="src/js/main.js"></script>
 </body>
 </html>
