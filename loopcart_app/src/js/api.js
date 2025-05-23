@@ -21,7 +21,7 @@ export const products = [
     },
     {
         id: 3,
-        title: "Avacados (large)",
+        title: "Avacado",
         img: "src/imgs/avacados.jpg",
         source: "Charmington Farms",
         price: 5.50,
@@ -54,11 +54,49 @@ export const products = [
 export const shoppingLists = [
     {
         id: 1,
-        name: "Appleseed Family List"
+        name: "Appleseed Family List",
+        listItems: [
+            {
+                category: "Produce",
+                color: "mint",
+                items: [
+                    {quantity: 2, title: "Blueberry Pack"},
+                    {quantity: 4, title: "Avacado"},
+                    {quantity: 1, title: "Strawberry Pack"}
+                ]
+            },
+            {
+                category: "Snacks",
+                color: "mushroom",
+                items: [
+                    {quantity: 1, title: "Kale Chips"},
+                    {quantity: 2, title: "Charmington Vegan Cookie Pack"},
+                    {quantity: 1, title: "Sillyguys Fries"}
+                ]
+            },
+            {
+                category: "Cosmetics",
+                color: "bluebery",
+                items: [
+                    {quantity: 2, title: "Grove Body Soap (4 pack)"},
+                    {quantity: 1, title: "Genesis Nail Polish"}
+                ]
+            }
+        ]
     },
     {
         id: 2,
-        name: "My List"
+        name: "My List",
+        listItems : [
+            {
+                category: "Medicine/Vitamin",
+                color: "dragonfruit",
+                items: [
+                    {quantity: 2, title: "Brylenol"},
+                    {quantity: 1, title: "Vitamin C Bottle"}
+                ]
+            }
+        ]
     },
     {
         id: 2,

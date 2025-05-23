@@ -99,31 +99,40 @@ document.addEventListener("DOMContentLoaded", () => {
         const saveAndStay = document.getElementById('save-and-stay');
         const saveAndGo = document.getElementById('save-and-go');
         const cancel = document.getElementById('cancel');
-
+        
         saveAndStay.addEventListener('click', () => {
           modalContainer.innerHTML = `
           <h6 class="gray-50">Saved ${count} ${product.title}${count > 1 ? 's' : ''} to ${el.name}</h6>
           `;
           setTimeout(() => {
-            listModal.classList.add('hidden');
+            backdrop.classList.remove('active');
+            listModal.classList.remove('show');
           }, 3000);
         });
 
         cancel.addEventListener('click', () => {
-          listModal.classList.add('hidden');
+          backdrop.classList.remove('active');
+          listModal.classList.remove('show');
         })
       });
       
       listOfLists.appendChild(button);
     });
   };
+  const backdrop = document.getElementById('modal-backdrop');
 
   addToListButton.addEventListener('click', () => {
     if (count > 0) {
-      listModal.classList.remove("hidden");
+      backdrop.classList.add('active');
+      listModal.classList.add("show");
       fillListOfList(product);
     };
   });
+
+  backdrop.addEventListener('click', () => {
+    backdrop.classList.remove('active');
+    listModal.classList.remove('show');
+  })
   } else {
     container.innerHTML = `<p class="bolder gray-400">Product not found</p>`;
   }

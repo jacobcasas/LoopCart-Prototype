@@ -754,13 +754,34 @@ hr {
     bottom: 15vh;
 }
 
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 50;
+  display: none;
+}
+
+.modal-backdrop.active {
+  display: block;
+}
+
 #list-modal {
-    width: 420px;
-    height: 378px;
-    background-color: var(--color-gray-800);
-    border-radius: var(--br-md);
-    overflow-y: scroll;
-    padding-top: 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background: var(--color-gray-900);
+  padding: 2rem;
+  border-radius: var(--br-lg);
+  display: none;
+}
+
+#list-modal.show {
+  display: block;
 }
 
 #list-modal-container {
@@ -798,6 +819,10 @@ hr {
     border: none;
     border-radius: var(--br-sm);
     padding: 8px 16px;
+}
+
+#save-and-go {
+    width: 200px;
 }
 
 #save-options {
