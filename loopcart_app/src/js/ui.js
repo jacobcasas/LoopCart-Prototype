@@ -1,3 +1,5 @@
+import { products } from "./api";
+
 //hero image auto slide
 const track = document.querySelector('.hero-image-container');
 const heroSlide = document.querySelectorAll('.hero-image');

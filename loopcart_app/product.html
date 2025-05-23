@@ -14,17 +14,26 @@
         <button class="back-button">&lt;</button>
         <div id="product-details"></div>
     </div>
+    <button class="boldest" id="add-to-list">Add to list</button>
     <div class="quantity-container">
         <div class="quantity-controller">
             <button class="change-quantity boldest" id="subtract">-</button>
             <p class="boldest" id="quantity"></p>
             <button class="change-quantity boldest" id="add">+</button>
         </div>
-        <button class="boldest gray-50" id="add-to-list">Add to list</button>
+        <div id="total-product"></div>
+    </div>
+
+    <div class="hidden" id="list-modal">
+        <div id="list-modal-container">
+            <h4 class="gray-400">Choose a list</h4>
+            <div id="list-of-lists"></div>
+        </div>
     </div>
 
     <script type="module" src="src/js/api.js"></script>
     <script type="module" src="src/js/product-page.js"></script>
     <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/ui.js"></script>
 </body>
 </html>
