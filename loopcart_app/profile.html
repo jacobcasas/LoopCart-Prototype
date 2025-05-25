@@ -40,15 +40,15 @@
         <div class="shopping-lists-container">
             <h4>Shopping Lists</h4>
             <div class="shopping-lists-row">
-              <div class="shopping-list-card">
+              <div class="shopping-list-card" data-id="1">
                 <h6 class="shopping-list-card-title">Appleseed Family List</h6>
                 <p class="shopping-list-card-quantity | small-text">25 items</p>
               </div>
-              <div class="shopping-list-card" style="background-color: var(--color-brand-mint);">
+              <div class="shopping-list-card" data-id="2" style="background-color: var(--color-brand-mint);">
                 <h6 class="shopping-list-card-title">My List</h6>
                 <p class="shopping-list-card-quantity | small-text">14 items</p>
               </div>
-              <div class="shopping-list-card" style="background-color: var(--color-brand-mint);">
+              <div class="shopping-list-card" data-id="3" style="background-color: var(--color-brand-mint);">
                 <h6 class="shopping-list-card-title">Just a Random List</h6>
                 <p class="shopping-list-card-quantity | small-text">1999 items</p>
               </div>
@@ -99,5 +99,8 @@
           </div>
         </div>
     </div>
+
+    <script type="module" src="src/js/shopping-list.js"></script>
+    <script type="module" src="src/js/ui.js"></script>
 </body>
 </html>

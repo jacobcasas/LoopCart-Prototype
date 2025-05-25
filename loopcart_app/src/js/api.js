@@ -76,7 +76,7 @@ export const shoppingLists = [
             },
             {
                 category: "Cosmetics",
-                color: "bluebery",
+                color: "blueberry",
                 items: [
                     {quantity: 2, title: "Grove Body Soap (4 pack)"},
                     {quantity: 1, title: "Genesis Nail Polish"}
@@ -99,7 +99,7 @@ export const shoppingLists = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         name: "Some Random List"
     }
 ]

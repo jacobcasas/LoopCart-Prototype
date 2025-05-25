@@ -17,3 +17,10 @@ document.querySelectorAll('.item-card-sm').forEach(card => {
         window.location.href = `product.html?id=${id}`;
     });
 });
+
+document.querySelectorAll('.shopping-list-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const id = card.dataset.id;
+        window.location.href = `shopping-list.html?id=${id}`;
+    });
+});
