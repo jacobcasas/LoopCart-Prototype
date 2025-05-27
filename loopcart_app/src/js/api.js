@@ -78,7 +78,7 @@ export const shoppingLists = [
                 category: "Cosmetics",
                 color: "blueberry",
                 items: [
-                    {quantity: 2, title: "Grove Body Soap (4 pack)", img: "src/imgs/soap-bar.jpg", price: 7.00},
+                    {quantity: 1, title: "Grove Body Soap (4 pack)", img: "src/imgs/soap-bar.jpg", price: 7.00},
                     {quantity: 1, title: "Genesis Nail Polish", img: "src/imgs/nail-polish.jpg", price: 2.50}
                 ]
             }
@@ -93,7 +93,7 @@ export const shoppingLists = [
                 color: "dragonfruit",
                 items: [
                     {quantity: 2, title: "Brylenol", price: 9.00},
-                    {quantity: 1, title: "Vitamin C Bottle", price:11.00}
+                    {quantity: 1, title: "Vitamin C Bottle", price: 11.00}
                 ]
             }
         ]

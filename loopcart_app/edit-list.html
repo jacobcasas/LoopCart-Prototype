@@ -10,25 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="list-name-searchbar-wrapper">
-        <div class="list-name-dropdown">
-            <h3 id="cart-title"></h3>
+    <div class="edit-page-container">
+        <div class="list-name-searchbar-wrapper">
+            <div class="list-name-dropdown">
+                <h3 id="cart-title"></h3>
+            </div>
+            <div class="search-item">
+                <input type="text" placeholder="search..." id="searchbar-shoplist" class="small-text">
+            </div>
         </div>
-        <div class="search-item">
-            <input type="text" placeholder="search..." id="searchbar-shoplist" class="small-text">
+        <div id="cart-items"></div>
+        <div class="subtotal-and-save">
+            <div class="subtotal-price">
+                <h5>Subtotal: $</h5>
+                <h5 id="price-shoplist"></h5>
+            </div>
+            <a href="save-to-list-success.html">
+                <button class="cta-button-primary">
+                    <span class="boldest">Save to List</span>
+                </button>
+            </a>
         </div>
-    </div>
-    <div id="cart-items"></div>
-    <div class="subtotal-and-save">
-        <div class="subtotal-price">
-            <h5>Subtotal: $</h5>
-            <h5 id="price-shoplist"></h5>
-        </div>
-        <a href="save-to-list-success.html">
-            <button class="cta-button-primary">
-                <span class="boldest">Save to List</span>
-            </button>
-        </a>
     </div>
 
     <script type="module" src="src/js/ui.js"></script>

@@ -19,18 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 return category.items.map(item => {
                     return `
                         <div class="cart-item-card">
-                            <img src="${item.img}" alt="${item.title}" width=136>
-                            <div class="cart-item-content">
-                                <div class="title-and-price">
-                                    <h3>${item.title}</h3>
-                                    <p class="small-text">$${item.price.toFixed(2)}</p>
+                            <img class="cart-item-image" src="${item.img}" alt="${item.title}" width=136>
+                            <div class="cart-right-container">
+                                <div class="cart-item-text-content">
+                                    <div class="title-and-price">
+                                        <h5 class="${category.color}">${item.title}${item.quantity > 1 ? "s" : ""}</h5>
+                                        <p class="small-text">$${(item.price.toFixed(2) * item.quantity).toFixed(2)}</p>
+                                    </div>
+                                    <p>${item.source}</p>
                                 </div>
-                                <p>${item.source}</p>
-                            </div>
-                            <div class="quantity-controller-cart">
-                                <button class="boldest">-</button>
-                                <p>${item.quantity}</p>
-                                <button class="boldest">+</button>
+                                <div class="quantity-controller-cart">
+                                    <button class="boldest change-quantity">-</button>
+                                    <p>${item.quantity}</p>
+                                    <button class="boldest change-quantity">+</button>
+                                </div>
                             </div>
                         </div>
                     `;
