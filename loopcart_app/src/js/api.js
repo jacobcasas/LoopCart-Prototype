@@ -60,26 +60,26 @@ export const shoppingLists = [
                 category: "Produce",
                 color: "mint",
                 items: [
-                    {quantity: 2, title: "Blueberry Pack"},
-                    {quantity: 4, title: "Avacado"},
-                    {quantity: 1, title: "Strawberry Pack"}
+                    {quantity: 2, title: "Blueberry Pack", img:"src/imgs/blueberries.jpg"},
+                    {quantity: 4, title: "Avacado", img: "src/imgs/avacados.jpg"},
+                    {quantity: 1, title: "Strawberry Pack", img: "src/imgs/strawberries.jpeg"}
                 ]
             },
-            {
+            { 
                 category: "Snacks",
                 color: "mushroom",
                 items: [
-                    {quantity: 1, title: "Kale Chips"},
-                    {quantity: 2, title: "Charmington Vegan Cookie Pack"},
-                    {quantity: 1, title: "Sillyguys Fries"}
+                    {quantity: 1, title: "Kale Chips", img:"src/imgs/kale-chips.jpeg"},
+                    {quantity: 2, title: "Charmington Vegan Cookie Pack", img:"src/imgs/vegan-cookies.jpg"},
+                    {quantity: 1, title: "Sillyguys Fries", img:"src/imgs/fries.jpg"}
                 ]
             },
             {
                 category: "Cosmetics",
                 color: "blueberry",
                 items: [
-                    {quantity: 2, title: "Grove Body Soap (4 pack)"},
-                    {quantity: 1, title: "Genesis Nail Polish"}
+                    {quantity: 2, title: "Grove Body Soap (4 pack)", img: "src/imgs/soap-bar.jpg"},
+                    {quantity: 1, title: "Genesis Nail Polish", img: "src/imgs/nail-polish.jpg"}
                 ]
             }
         ]
