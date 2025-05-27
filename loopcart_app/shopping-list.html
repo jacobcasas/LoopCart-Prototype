@@ -11,11 +11,15 @@
 </head>
 <body>
     <div class="shopping-list-container">
-        <h3 id="list-title"></h3>
+        <div class="back-button-and-title">
+            <button class="back-button boldest">&lt;</button>
+            <h3 id="list-title"></h3>
+        </div>
         <div id="shopping-list-details"></div>
-        <a href="shopping-cart.html"><button class="edit-button"><img src="src/icons/edit-button-icon.svg" alt="edit button" class="edit-button-icon"></button></a>
+        <a href="edit-list.html"><button class="edit-button" id="edit-button"><img src="src/icons/edit-button-icon.svg" alt="edit button" class="edit-button-icon"></button></a>
     </div>
 
+    <script type="module" src="src/js/main.js"></script>
     <script type="module" src="src/js/shopping-list.js"></script>
 </body>
 </html>

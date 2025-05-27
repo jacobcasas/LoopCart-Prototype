@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (shoppingList.listItems) {
       const listHTML = shoppingList.listItems.map(category => `
-        <h4 class="${category.color || ""} boldest">${category.category}</h4>
+        <h3 class="${category.color || ""} boldest">${category.category}</h3>
         <ul>
           ${category.items.map(item => `
-            <li>${item.quantity} × ${item.title}</li>
+            <li class="boldest">${item.quantity} × ${item.title}</li>
           `).join("")}
         </ul>
       `).join("");
@@ -32,5 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     container.innerHTML = `<p>Shopping list not found.</p>`;
   }
+
+  const editButton = document.getElementById('edit-button');
+  if (editButton) {
+    editButton.addEventListener('click', () => {
+      window.location.href = `edit-list.html?id=${shoppingListId}`;
+    });
+  };
 });
         

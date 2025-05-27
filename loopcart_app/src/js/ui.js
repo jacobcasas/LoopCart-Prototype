@@ -1,4 +1,5 @@
 import { products } from "./api";
+import { shoppingLists } from "./api";
 
 //hero image auto slide
 const track = document.querySelector('.hero-image-container');
@@ -24,3 +25,4 @@ document.querySelectorAll('.shopping-list-card').forEach(card => {
         window.location.href = `shopping-list.html?id=${id}`;
     });
 });
+

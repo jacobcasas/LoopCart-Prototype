@@ -183,6 +183,11 @@ h6 {
     line-height: normal;
 }
 
+li {
+    font-size: 1.4375rem;
+    line-height: normal;
+}
+
 p {
     font-size: 1rem;
     letter-spacing: 5%;
@@ -453,7 +458,11 @@ hr {
     flex-direction: column;
     gap: var(--spacing-2);
 }
-
+.back-button-and-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
 .shop-list-items {
     display: flex;
     flex-direction: column;
