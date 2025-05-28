@@ -453,6 +453,11 @@ hr {
     padding: 0 16px;
 }
 
+.trash-button {
+    border: none;
+    background-color: var(--color-gray-200);
+}
+
 .subtotal-and-save {
     background-color: var(--color-gray-800);
     width: 100vw;
