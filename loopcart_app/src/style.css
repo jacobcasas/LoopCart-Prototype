@@ -442,6 +442,10 @@ hr {
     border-radius: var(--br-md);
 }
 
+#price-shoplist {
+    font-size: 1.2rem;
+}
+
 .quantity-controller-cart {
     display: flex;
     justify-content: space-between;
