@@ -1,4 +1,4 @@
-import { shoppingLists } from "./api";
+import { searchableProducts, shoppingLists } from "./api";
 
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTitle = document.getElementById('cart-title');
     const cartItems = document.getElementById('cart-items');
     const priceShopList = document.getElementById('price-shoplist');
+    const searchInput = document.getElementById('searchbar-shoplist');
+    const searchResults = document.getElementById('search-results');
 
     if (!shoppingList || !cartTitle || !cartItems || !priceShopList) {
         console.error("Missing shopping list or page elements.");
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="cart-right-container">
                             <div class="cart-item-text-content">
                                 <div class="title-and-price">
-                                    <h5 class="${category.color}">${item.title}${item.quantity > 1 ? "s" : ""}</h5>
+                                    <h5 class="${item.color} ${category.color} bolder truncated">${item.title}${item.quantity > 1 ? "s" : ""}</h5>
                                     <p class="small-text">$${(item.price * item.quantity).toFixed(2)}</p>
                                 </div>
                                 <p>${item.source}</p>
@@ -93,6 +95,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         renderCart();
+    });
+    
+    searchInput.addEventListener('input', async (e) => {
+        const query = e.target.value.trim().toLowerCase();
+        
+
+        if (!query) {
+            searchResults.innerHTML = "";
+            searchResults.classList.add('hidden');
+            return;
+        }
+
+        searchResults.classList.remove('hidden');
+
+        const products = await searchableProducts(query);
+
+        const resultsHTML = products.map(product => `
+            <div class="search-result-item" data-product-id="${product.id}">
+                <img class="search-result-img" src="${product.img}" alt="${product.title}">
+                <div class="title-and-add-button">
+                    <span class="search-result-title | bolder ${product.color}">${product.title}</span>
+                    <button class="add-product-button | bolder">Add</button>
+                </div>
+            </div>
+        `).join("");
+
+        searchResults.innerHTML = resultsHTML;
+    });
+
+    searchResults.addEventListener('click', e => {
+        if (!e.target.classList.contains('add-product-button')) return;
+
+        const productItem = e.target.closest('.search-result-item');
+        const productId = parseInt(productItem.dataset.productId);
+
+        searchableProducts().then(products => {
+            const foundProduct = products.find(p => p.id === productId);
+            if (!foundProduct) return;
+
+            let customCategory = shoppingList.listItems.find(c => c.name === "Custom Additions");
+            if (!customCategory) {
+                customCategory = {name: "Custom Additions", color: "custom color", items: []};
+                shoppingList.listItems.unshift(customCategory);
+            }
+
+            const newProduct = {...foundProduct, id: currentId++, quantity: 1};
+            customCategory.items.unshift(newProduct);
+
+            searchInput.value = "";
+
+            searchResults.classList.add('hidden');
+
+            renderCart();
+        })
     });
 
     renderCart();

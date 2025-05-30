@@ -51,6 +51,17 @@ export const products = [
     }
 ]
 
+export const searchableProducts = async (query = "") => {
+    const allProducts = [
+        {id: 1001, title: "Apple", price: 2.50, img: "src/imgs/apples.jpg", source: "Organic Market", color: "mint"},
+        {id: 1002, title: "Whole Milk", price: 5.00, img: "src/imgs/whole-milk.jpg", source: "Dairy Hub", color: "mint"},
+        {id: 1003, title: "Orange Juice", price: 4.75, img: "src/imgs/orange-juice.jpeg", source: "Fruit Juicers", color:"mint"}
+    ];
+    return allProducts.filter(product => 
+        product.title.toLowerCase().includes(query.toLowerCase())
+    );
+}
+
 export const shoppingLists = [
     {
         id: 1,
@@ -61,25 +72,25 @@ export const shoppingLists = [
                 color: "mint",
                 items: [
                     {quantity: 2, title: "Blueberry Pack", img:"src/imgs/blueberries.jpg", price: 3.00, source: "Charmington Farms"},
-                    {quantity: 4, title: "Avacado", img: "src/imgs/avacados.jpg", price: 5.50},
-                    {quantity: 1, title: "Strawberry Pack", img: "src/imgs/strawberries.jpeg", price: 3.50}
+                    {quantity: 4, title: "Avacado", img: "src/imgs/avacados.jpg", price: 5.50, source: "Charmington Farms"},
+                    {quantity: 1, title: "Strawberry Pack", img: "src/imgs/strawberries.jpeg", price: 3.50, source: "Charmington Farms"}
                 ]
             },
             { 
                 category: "Snacks",
                 color: "mushroom",
                 items: [
-                    {quantity: 1, title: "Kale Chips", img:"src/imgs/kale-chips.jpeg", price: 6.00},
-                    {quantity: 2, title: "Charmington Vegan Cookie Pack", img:"src/imgs/vegan-cookies.jpg", price: 8.25},
-                    {quantity: 1, title: "Sillyguys Fries", img:"src/imgs/fries.jpg", price: 5.50}
+                    {quantity: 1, title: "Kale Chips", img:"src/imgs/kale-chips.jpeg", price: 6.00, source: "The Chippers"},
+                    {quantity: 2, title: "Charmington Vegan Cookie Pack", img:"src/imgs/vegan-cookies.jpg", price: 8.25, source: "Charmington Farms"},
+                    {quantity: 1, title: "Sillyguys Fries", img:"src/imgs/fries.jpg", price: 5.50, source: "Sillyguys"}
                 ]
             },
             {
                 category: "Cosmetics",
                 color: "blueberry",
                 items: [
-                    {quantity: 1, title: "Grove Body Soap (4 pack)", img: "src/imgs/soap-bar.jpg", price: 7.00},
-                    {quantity: 1, title: "Genesis Nail Polish", img: "src/imgs/nail-polish.jpg", price: 2.50}
+                    {quantity: 1, title: "Grove Body Soap (4 pack)", img: "src/imgs/soap-bar.jpg", price: 7.00, source: "Grove Cosmetics"},
+                    {quantity: 1, title: "Genesis Nail Polish", img: "src/imgs/nail-polish.jpg", price: 2.50, source: "Genesis Cosmetics"}
                 ]
             }
         ]
