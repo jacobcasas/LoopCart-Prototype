@@ -1,11 +1,13 @@
-import { products } from "./api";
-import { shoppingLists } from "./api";
+import { products, shoppingLists } from "./api.js";
 
-//hero image auto slide
+// =====================
+// Hero Image Auto Slide
+// =====================
+
 const track = document.querySelector('.hero-image-container');
-const heroSlide = document.querySelectorAll('.hero-image');
-const totalSlides = heroSlide.length;
-const slideWidth = heroSlide[0].offsetWidth;
+const heroSlides = document.querySelectorAll('.hero-image');
+const totalSlides = heroSlides.length;
+const slideWidth = heroSlides[0]?.offsetWidth || 0;
 
 let index = 0;
 let slideInterval;
@@ -15,72 +17,111 @@ let currentTranslate = 0;
 let prevTranslate = 0;
 
 const startSlider = () => {
-    slideInterval = setInterval(() => {
-        index = (index + 1) % totalSlides;
-        moveToSlide(index);
-    }, 4000);
-}
+  slideInterval = setInterval(() => {
+    index = (index + 1) % totalSlides;
+    moveToSlide(index);
+  }, 4000);
+};
 
 const stopSlider = () => {
-    clearInterval(slideInterval);
-}
+  clearInterval(slideInterval);
+};
 
 const moveToSlide = (i) => {
-    currentTranslate = -i * slideWidth;
-    prevTranslate = currentTranslate;
-    track.style.transition = 'transform 0.3s ease';
-    track.style.transform = `translateX(${currentTranslate}px)`;
-}
+  currentTranslate = -i * slideWidth;
+  prevTranslate = currentTranslate;
+  track.style.transition = 'transform 0.3s ease';
+  track.style.transform = `translateX(${currentTranslate}px)`;
+};
 
-track.addEventListener('mouseenter', stopSlider);
-track.addEventListener('mouseleave', startSlider);
+const snapToNearestSlide = () => {
+  index = Math.round(-currentTranslate / slideWidth);
+  index = Math.max(0, Math.min(index, totalSlides - 1));
+  moveToSlide(index);
+};
 
-//hero image draggable 
+if (track && totalSlides > 0) {
+  track.addEventListener('mouseenter', stopSlider);
+  track.addEventListener('mouseleave', startSlider);
 
-track.addEventListener('mousedown', e => {
+  track.addEventListener('mousedown', (e) => {
     e.preventDefault();
     isDragging = true;
     startX = e.pageX;
     stopSlider();
     track.style.transition = 'none';
-});
+  });
 
-window.addEventListener('mousemove', e => {
+  window.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     const deltaX = e.pageX - startX;
     currentTranslate = prevTranslate + deltaX;
     track.style.transform = `translateX(${currentTranslate}px)`;
-});
+  });
 
-window.addEventListener('mouseup', () => {
+  window.addEventListener('mouseup', () => {
     if (!isDragging) return;
     isDragging = false;
     snapToNearestSlide();
     startSlider();
-});
+  });
 
-// pause slider on hover
-
-const snapToNearestSlide = () => {
-    index = Math.round(-currentTranslate / slideWidth);
-    if (index < 0) index = 0;
-    if (index >= totalSlides) index = totalSlides - 1;
-    moveToSlide(index);
+  startSlider();
 }
 
-startSlider();
+// =====================
+// Card Navigation
+// =====================
+
+const navigateToPage = (id, page) => {
+  if (id) window.location.href = `${page}.html?id=${id}`;
+};
 
 document.querySelectorAll('.item-card-sm').forEach(card => {
-    card.addEventListener('click', () => {
-        const id = card.dataset.id;
-        window.location.href = `product.html?id=${id}`;
-    });
+  card.addEventListener('click', () => {
+    navigateToPage(card.dataset.id, 'product');
+  });
 });
 
 document.querySelectorAll('.shopping-list-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const id = card.dataset.id;
-        window.location.href = `shopping-list.html?id=${id}`;
-    });
+  card.addEventListener('click', () => {
+    navigateToPage(card.dataset.id, 'shopping-list');
+  });
 });
 
+// =====================
+// Search Bar Toggle
+// =====================
+
+const searchIcon = document.getElementById('search-icon');
+const topNavContent = document.querySelector('.top-nav-container');
+const searchContainer = document.getElementById('search-container');
+const searchInput = document.querySelector('.search-input');
+const closeSearchButton = document.querySelector('.close-search');
+
+if (searchIcon && searchContainer && topNavContent && searchInput && closeSearchButton) {
+  searchIcon.addEventListener('click', () => {
+    topNavContent.classList.add('hidden');
+    searchContainer.classList.remove('hidden');
+    searchContainer.classList.add('search-container');
+    topNavContent.classList.remove('top-nav-container');
+    searchInput.focus();
+  });
+
+  closeSearchButton.addEventListener('click', () => {
+    searchContainer.classList.add('hidden');
+    searchContainer.classList.remove('search-container');
+    topNavContent.classList.remove('hidden');
+    topNavContent.classList.add('top-nav-container');
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backButton = document.querySelector(".back-button");
+
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
+  }
+});

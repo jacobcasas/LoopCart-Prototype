@@ -1,5 +1,4 @@
-import { products } from "./api.js";
-import { shoppingLists } from "./api.js";
+import { products, shoppingLists } from "./api.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);

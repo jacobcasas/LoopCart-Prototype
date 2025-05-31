@@ -48,18 +48,45 @@ export const products = [
         discount: "",
         color: "blueberry",
         size: "1 ct"
+    },
+    {
+        id: 6,
+        title: "Apple",
+        img: "src/imgs/apples.jpg",
+        source: "Organic Market",
+        price: .50,
+        discount: "",
+        color: "mint",
+        size: "100 g"
+    },
+    {
+        id: 7,
+        title: "Whole Milk",
+        img: "src/imgs/whole-milk.jpg",
+        source: "Dairy Market",
+        price: 5.00,
+        discount: "",
+        color: "mint",
+        size: "1 gal"
+    },
+    {
+        id: 8,
+        title: "Orange Juice",
+        img: "src/imgs/orange-juice.jpeg",
+        source: "Fruit Juicers",
+        price: 4.75,
+        discount: "",
+        color: "mint",
+        size: "1 gal"
     }
 ]
 
-export const searchableProducts = async (query = "") => {
+export const searchableProducts = () => {
     const allProducts = [
-        {id: 1001, title: "Apple", price: 2.50, img: "src/imgs/apples.jpg", source: "Organic Market", color: "mint"},
-        {id: 1002, title: "Whole Milk", price: 5.00, img: "src/imgs/whole-milk.jpg", source: "Dairy Hub", color: "mint"},
-        {id: 1003, title: "Orange Juice", price: 4.75, img: "src/imgs/orange-juice.jpeg", source: "Fruit Juicers", color:"mint"}
+        {id: 1001, title: "Apple", price: 2.50, img: "src/imgs/apples.jpg", source: "Organic Market", color: "mint", size: "100 g"},
+        {id: 1002, title: "Whole Milk", price: 5.00, img: "src/imgs/whole-milk.jpg", source: "Dairy Hub", color: "mint", size: "1 gal"},
+        {id: 1003, title: "Orange Juice", price: 4.75, img: "src/imgs/orange-juice.jpeg", source: "Fruit Juicers", color:"mint", size: "1 gal"}
     ];
-    return allProducts.filter(product => 
-        product.title.toLowerCase().includes(query.toLowerCase())
-    );
 }
 
 export const shoppingLists = [
