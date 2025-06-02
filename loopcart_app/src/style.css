@@ -438,21 +438,6 @@ hr {
     position: relative;
 }
 
-.add-button-notification {
-    display: flex;
-    min-width: 24px;
-    height: 24px;
-    border-radius: var(--br-xl);
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: var(--color-gray-50);
-    background-color: var(--color-gray-800);
-    position: absolute;
-    bottom: 8%;
-    right: 3%;
-}
-
 .bottom-nav {
     width: 100vw;
     height: 72px;
@@ -816,6 +801,27 @@ hr {
     height: 97px;
     background-color: var(--color-gray-400);
     border-radius: var(--br-md);
+}
+
+.notification-img {
+    width: 223px;
+    height: 97px;
+    border-radius: var(--br-md);
+}
+
+.add-button-notification {
+    display: flex;
+    min-width: 28px;
+    height: 28px;
+    border-radius: var(--br-xl);
+    border: 2px solid var(--color-gray-400);
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray-50);
+    background-color: var(--color-gray-800);
+    position: absolute;
+    bottom: 8%;
+    right: 3%;
 }
 
 .caught-up-reminder {
