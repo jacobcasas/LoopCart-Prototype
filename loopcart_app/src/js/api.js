@@ -81,12 +81,18 @@ export const products = [
     }
 ]
 
-export const searchableProducts = () => {
+export const searchableProducts = async (query = "") => {
     const allProducts = [
         {id: 1001, title: "Apple", price: 2.50, img: "src/imgs/apples.jpg", source: "Organic Market", color: "mint", size: "100 g"},
         {id: 1002, title: "Whole Milk", price: 5.00, img: "src/imgs/whole-milk.jpg", source: "Dairy Hub", color: "mint", size: "1 gal"},
         {id: 1003, title: "Orange Juice", price: 4.75, img: "src/imgs/orange-juice.jpeg", source: "Fruit Juicers", color:"mint", size: "1 gal"}
     ];
+
+    if (!query) return allProducts;
+
+    return allProducts.filter(product => 
+        product.title.toLowerCase().includes(query)
+    );
 }
 
 export const shoppingLists = [

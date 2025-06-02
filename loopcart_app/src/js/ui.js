@@ -89,33 +89,6 @@ document.querySelectorAll('.shopping-list-card').forEach(card => {
   });
 });
 
-// =====================
-// Search Bar Toggle
-// =====================
-
-const searchIcon = document.getElementById('search-icon');
-const topNavContent = document.querySelector('.top-nav-container');
-const searchContainer = document.getElementById('search-container');
-const searchInput = document.querySelector('.search-input');
-const closeSearchButton = document.querySelector('.close-search');
-
-if (searchIcon && searchContainer && topNavContent && searchInput && closeSearchButton) {
-  searchIcon.addEventListener('click', () => {
-    topNavContent.classList.add('hidden');
-    searchContainer.classList.remove('hidden');
-    searchContainer.classList.add('search-container');
-    topNavContent.classList.remove('top-nav-container');
-    searchInput.focus();
-  });
-
-  closeSearchButton.addEventListener('click', () => {
-    searchContainer.classList.add('hidden');
-    searchContainer.classList.remove('search-container');
-    topNavContent.classList.remove('hidden');
-    topNavContent.classList.add('top-nav-container');
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const backButton = document.querySelector(".back-button");
 

@@ -9,175 +9,177 @@
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="top-nav-wrap">
-    <div class="top-nav-container">
-      <div class="left-nav">
-        <img src="src/icons/location-icon.svg" alt="." width="12px" height="12px">
-        <h6>123 Cool St</h6>
-        <img src="src/icons/chevron-sm.svg" alt="" width="12px" height="12px">
+  <div id="home-container">
+    <div class="top-nav-wrap">
+      <div id="top-nav-container" class="top-nav-container">
+        <div class="left-nav">
+          <img src="src/icons/location-icon.svg" alt="." width="12px" height="12px">
+          <h6>123 Cool St</h6>
+          <img src="src/icons/chevron-sm.svg" alt="" width="12px" height="12px">
+        </div>
+        <div class="right-nav">
+          <a href="notifications.html"><img src="src/icons/notification-icon.svg" alt="."></a>
+          <img id="search-icon" src="src/icons/magnifying-glass.svg" alt="." width="24px" height="24px">
+        </div>
       </div>
-      <div class="right-nav">
-        <a href="notifications.html"><img src="src/icons/notification-icon.svg" alt="."></a>
-        <img id="search-icon" src="src/icons/magnifying-glass.svg" alt="." width="24px" height="24px">
+      <div class="hidden" id="search-container" class="search-container">
+        <div class="searchbar-and-close">
+          <input id="searchbar-home" type="text" placeholder="Search for products..." class="search-input" />
+          <button id="close-search" class="close-search | bold gray-600">x</button>
+        </div>
+        <div id="search-results-home" class="search-results"></div>
       </div>
     </div>
-    <div class="hidden" id="search-container">
-      <div class="searchbar-and-close">
-        <input id="searchbar-home" type="text" placeholder="Search for products..." class="search-input" />
-        <button class="close-search">x</button>
+    <div class="hero-section">
+      <div class="hero-image-container">
+        <img draggable="false" src="src/imgs/LoopCart+hero.svg" alt="loopcart+ hero image" class="hero-image">
+        <img draggable="false" src="src/imgs/Late-night-snack-hero.svg" alt="late night hero image" class="hero-image">
       </div>
-      <div id="search-results-home" class="search-results"></div>
     </div>
-  </div>
-  <div class="hero-section">
-    <div class="hero-image-container">
-      <img draggable="false" src="src/imgs/LoopCart+hero.svg" alt="loopcart+ hero image" class="hero-image">
-      <img draggable="false" src="src/imgs/Late-night-snack-hero.svg" alt="late night hero image" class="hero-image">
-    </div>
-  </div>
-  <div class="home-item-suggestions">
-      <div class="title-and-items">
-        <h4>A Healthier Breakfast</h4>
-        <div class="item-carousel">
-          <div class="item-card-sm" data-id="2">
-            <div class="item-picture">
-              <img src="src/imgs/strawberries.jpeg" alt="" style="border-radius: var(--br-md);">
-              <button class="add-button-notification">+</button>
+    <div class="home-item-suggestions">
+        <div class="title-and-items">
+          <h4>A Healthier Breakfast</h4>
+          <div class="item-carousel">
+            <div class="item-card-sm" data-id="2">
+              <div class="item-picture">
+                <img src="src/imgs/strawberries.jpeg" alt="" style="border-radius: var(--br-md);">
+                <button class="add-button-notification">+</button>
+              </div>
+              <div class="item-content">
+                <h6>$3.50</h6>
+                <p class="small-text truncated-sm">Strawberries</p>
+                <p class="xs-text gray-400">2 oz.</p>
+              </div>
             </div>
-            <div class="item-content">
-              <h6>$3.50</h6>
-              <p class="small-text truncated-sm">Strawberries</p>
-              <p class="xs-text gray-400">2 oz.</p>
+            <div class="item-card-sm" data-id="3">
+              <div class="item-picture">
+                <img src="src/imgs/avacados.jpg" alt="" style="border-radius: var(--br-md);">
+                <button class="add-button-notification">+</button>
+              </div>
+              <div class="item-content">
+                <h6 class="truncated-sm">$5.50</h6>
+                <p class="small-text truncated-sm">Avacados(large)</p>
+                <p class="xs-text gray-400">1 lb</p>
+              </div>
             </div>
-          </div>
-          <div class="item-card-sm" data-id="3">
-            <div class="item-picture">
-              <img src="src/imgs/avacados.jpg" alt="" style="border-radius: var(--br-md);">
-              <button class="add-button-notification">+</button>
+            <div class="item-card-sm" data-id="1">
+              <div class="item-picture">
+                <img src="src/imgs/blueberries.jpg" alt="" style="border-radius: var(--br-md);">
+                <button class="add-button-notification">+</button>
+              </div>
+              <div class="item-content">
+                <h6>$3.00</h6>
+                <p class="small-text">Blueberries</p>
+                <p class="xs-text gray-400">2 oz.</p>
+              </div>
             </div>
-            <div class="item-content">
-              <h6 class="truncated-sm">$5.50</h6>
-              <p class="small-text truncated-sm">Avacados(large)</p>
-              <p class="xs-text gray-400">1 lb</p>
+            <div class="item-card-sm">
+              <div class="item-picture">
+                <img src="src/imgs/strawberries.jpeg" alt="" style="border-radius: var(--br-md);">
+                <button class="add-button-notification">+</button>
+              </div>
+              <div class="item-content">
+                <h6>$3.50</h6>
+                <p class="small-text truncated-sm">Strawberries</p>
+                <p class="xs-text gray-400">2 oz.</p>
+              </div>
             </div>
-          </div>
-          <div class="item-card-sm" data-id="1">
-            <div class="item-picture">
-              <img src="src/imgs/blueberries.jpg" alt="" style="border-radius: var(--br-md);">
-              <button class="add-button-notification">+</button>
+            <div class="item-card-sm">
+              <div class="item-picture">
+                <img src="src/imgs/avacados.jpg" alt="" style="border-radius: var(--br-md);">
+                <button class="add-button-notification">+</button>
+              </div>
+              <div class="item-content">
+                <h6>$5.50</h6>
+                <p class="small-text truncated-sm">Avacados(large)</p>
+                <p class="xs-text gray-400">1 ct</p>
+              </div>
             </div>
-            <div class="item-content">
-              <h6>$3.00</h6>
-              <p class="small-text">Blueberries</p>
-              <p class="xs-text gray-400">2 oz.</p>
-            </div>
-          </div>
-          <div class="item-card-sm">
-            <div class="item-picture">
-              <img src="src/imgs/strawberries.jpeg" alt="" style="border-radius: var(--br-md);">
-              <button class="add-button-notification">+</button>
-            </div>
-            <div class="item-content">
-              <h6>$3.50</h6>
-              <p class="small-text truncated-sm">Strawberries</p>
-              <p class="xs-text gray-400">2 oz.</p>
-            </div>
-          </div>
-          <div class="item-card-sm">
-            <div class="item-picture">
-              <img src="src/imgs/avacados.jpg" alt="" style="border-radius: var(--br-md);">
-              <button class="add-button-notification">+</button>
-            </div>
-            <div class="item-content">
-              <h6>$5.50</h6>
-              <p class="small-text truncated-sm">Avacados(large)</p>
-              <p class="xs-text gray-400">1 ct</p>
-            </div>
-          </div>
-          <div class="item-card-sm">
-            <div class="item-picture">
-              <img src="src/imgs/blueberries.jpg" alt="" style="border-radius: var(--br-md);">
-              <button class="add-button-notification">+</button>
-            </div>
-            <div class="item-content">
-              <h6>$3.00</h6>
-              <p class="small-text">Blueberries</p>
-              <p class="xs-text gray-400">2 oz.</p>
+            <div class="item-card-sm">
+              <div class="item-picture">
+                <img src="src/imgs/blueberries.jpg" alt="" style="border-radius: var(--br-md);">
+                <button class="add-button-notification">+</button>
+              </div>
+              <div class="item-content">
+                <h6>$3.00</h6>
+                <p class="small-text">Blueberries</p>
+                <p class="xs-text gray-400">2 oz.</p>
+              </div>
             </div>
           </div>
         </div>
+        <div class="title-and-items">
+      <h4>Cosmetics You Need To Try</h4>
+      <div class="item-carousel">
+        <div class="item-card-sm" data-id="4">
+            <div class="item-picture" style="background-color: #FFF;">
+              <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
+              <button class="add-button-notification">+</button>
+            </div>
+            <div class="item-content">
+              <h6>$4.50</h6>
+              <p class="small-text truncated-sm">Genesis Sunscreen</p>
+              <p class="xs-text gray-400">1 ct</p>
+            </div>
+        </div>
+        <div class="item-card-sm" data-id="5">
+            <div class="item-picture">
+              <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
+              <button class="add-button-notification">+</button>
+            </div>
+            <div class="item-content">
+              <h6>$2.50</h6>
+              <p class="small-text truncated-sm">Genesis Nail Polish</p>
+              <p class="xs-text gray-400">1 ct</p>
+            </div>
+        </div>
+        <div class="item-card-sm">
+            <div class="item-picture" style="background-color: #FFF;">
+              <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
+              <button class="add-button-notification">+</button>
+            </div>
+            <div class="item-content">
+              <h6>$4.50</h6>
+              <p class="small-text truncated-sm">Genesis Sunscreen</p>
+              <p class="xs-text gray-400">1 ct</p>
+            </div>
+        </div>
+        <div class="item-card-sm">
+            <div class="item-picture">
+              <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
+              <button class="add-button-notification">+</button>
+            </div>
+            <div class="item-content">
+              <h6>$2.50</h6>
+              <p class="small-text truncated-sm">Genesis Nail Polish</p>
+              <p class="xs-text gray-400">1 ct</p>
+            </div>
+        </div>
+        <div class="item-card-sm">
+            <div class="item-picture" style="background-color: #FFF;">
+              <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
+              <button class="add-button-notification">+</button>
+            </div>
+            <div class="item-content">
+              <h6>$4.50</h6>
+              <p class="small-text truncated-sm">Genesis Sunscreen</p>
+              <p class="xs-text gray-400">1 ct</p>
+            </div>
+        </div>
+        <div class="item-card-sm">
+            <div class="item-picture">
+              <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
+              <button class="add-button-notification">+</button>
+            </div>
+            <div class="item-content">
+              <h6>$2.50</h6>
+              <p class="small-text truncated-sm">Genesis Nail Polish</p>
+              <p class="xs-text gray-400">1 ct</p>
+            </div>
+        </div>
       </div>
-      <div class="title-and-items">
-    <h4>Cosmetics You Need To Try</h4>
-    <div class="item-carousel">
-      <div class="item-card-sm" data-id="4">
-          <div class="item-picture" style="background-color: #FFF;">
-            <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
-            <button class="add-button-notification">+</button>
-          </div>
-          <div class="item-content">
-            <h6>$4.50</h6>
-            <p class="small-text truncated-sm">Genesis Sunscreen</p>
-            <p class="xs-text gray-400">1 ct</p>
-          </div>
-      </div>
-      <div class="item-card-sm" data-id="5">
-          <div class="item-picture">
-            <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
-            <button class="add-button-notification">+</button>
-          </div>
-          <div class="item-content">
-            <h6>$2.50</h6>
-            <p class="small-text truncated-sm">Genesis Nail Polish</p>
-            <p class="xs-text gray-400">1 ct</p>
-          </div>
-      </div>
-      <div class="item-card-sm">
-          <div class="item-picture" style="background-color: #FFF;">
-            <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
-            <button class="add-button-notification">+</button>
-          </div>
-          <div class="item-content">
-            <h6>$4.50</h6>
-            <p class="small-text truncated-sm">Genesis Sunscreen</p>
-            <p class="xs-text gray-400">1 ct</p>
-          </div>
-      </div>
-      <div class="item-card-sm">
-          <div class="item-picture">
-            <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
-            <button class="add-button-notification">+</button>
-          </div>
-          <div class="item-content">
-            <h6>$2.50</h6>
-            <p class="small-text truncated-sm">Genesis Nail Polish</p>
-            <p class="xs-text gray-400">1 ct</p>
-          </div>
-      </div>
-      <div class="item-card-sm">
-          <div class="item-picture" style="background-color: #FFF;">
-            <img src="src/imgs/sunscreen.png" alt="" width="95px" height="95px">
-            <button class="add-button-notification">+</button>
-          </div>
-          <div class="item-content">
-            <h6>$4.50</h6>
-            <p class="small-text truncated-sm">Genesis Sunscreen</p>
-            <p class="xs-text gray-400">1 ct</p>
-          </div>
-      </div>
-      <div class="item-card-sm">
-          <div class="item-picture">
-            <img src="src/imgs/nail-polish.jpg" alt="" style="border-radius: var(--br-md);"> 
-            <button class="add-button-notification">+</button>
-          </div>
-          <div class="item-content">
-            <h6>$2.50</h6>
-            <p class="small-text truncated-sm">Genesis Nail Polish</p>
-            <p class="xs-text gray-400">1 ct</p>
-          </div>
-      </div>
+        </div>
     </div>
-      </div>
   </div>
   <div class="bottom-nav">
     <div class="bottom-nav-container">
@@ -189,7 +191,7 @@
         </svg>
         </button>
       </a>
-      <a href="edit-list.html">
+      <a href="shopping-list.html?id=1">
         <button class="bottom-nav-button">
           <svg width="39" height="46" viewBox="0 0 39 46" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.9029 10.1133L31.112 11.9768C31.6033 12.262 31.9457 12.4611 32.1997 12.6377C32.3868 12.7679 32.5055 12.8723 32.5868 12.9687L32.6567 13.0623C32.8071 13.2951 32.8893 13.5648 32.896 13.8404L32.8938 13.9589C32.8857 14.1063 32.8391 14.2799 32.7087 14.5538C32.5756 14.8332 32.3766 15.1763 32.0912 15.6678L18.641 38.831C18.4796 39.1091 18.3966 39.2491 18.3266 39.3452L18.2592 39.4303C18.2152 39.4799 18.1675 39.5261 18.1175 39.5693L17.9586 39.6894C17.9007 39.7273 17.8384 39.7608 17.7405 39.8044L17.3115 39.981L14.3065 41.1869C13.618 41.4631 13.1323 41.6569 12.748 41.7725C12.462 41.8586 12.2657 41.8903 12.1141 41.8878L11.9758 41.8752C11.6502 41.8163 11.3543 41.6513 11.1333 41.4086L11.0438 41.3002C10.9406 41.1629 10.8558 40.9563 10.787 40.5638C10.7524 40.3663 10.7243 40.1373 10.6968 39.8655L10.6114 38.908L10.3588 35.9201C10.3341 35.6268 10.323 35.4785 10.3241 35.3692L10.329 35.2693C10.3351 35.2085 10.3449 35.1481 10.3583 35.0887L10.4095 34.9129C10.4523 34.7932 10.5177 34.6761 10.7147 34.3369L24.2119 11.0925C24.4973 10.6011 24.6967 10.2581 24.8733 10.004C25.0033 9.81711 25.1075 9.69898 25.2038 9.61773L25.2974 9.54788C25.5302 9.39751 25.8 9.31525 26.0755 9.30859L26.1945 9.3099C26.3419 9.31808 26.5153 9.36553 26.7889 9.49584C27.0683 9.62893 27.4114 9.82797 27.9029 10.1133Z" fill="currentColor" stroke="currentColor "/>
