@@ -260,6 +260,10 @@ hr {
 }
 
 .hidden {
+    display: none;
+}
+
+.hide-search {
     display: none !important;
 }
 

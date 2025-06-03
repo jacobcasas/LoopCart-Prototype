@@ -10,16 +10,16 @@ const closeSearchButton = document.getElementById("close-search");
 let debounceTimeout;
 
 const openSearch = () => {
-  topNavContent.classList.add('hidden');
-  searchContainer.classList.remove('hidden');
+  topNavContent.classList.add('hide-search');
+  searchContainer.classList.remove('hide-search');
   searchContainer.classList.add('active');
   searchInput.focus();
 }
 
 const closeSearch = () => {
-  topNavContent.classList.remove("hidden");
+  topNavContent.classList.remove("hide-search");
   searchContainer.classList.remove("active");
-  searchContainer.classList.add("hidden");
+  searchContainer.classList.add("hide-search");
   searchResults.classList.remove("show");
   searchInput.value = "";
 }

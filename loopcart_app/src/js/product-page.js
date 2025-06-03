@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="xs-text discount">${product.discount}</p>
              </div>
             <p class="boldest gray-600">${product.source}</p>
-        </div
+        </div>
       </div>
     `;
 
@@ -107,6 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
             backdrop.classList.remove('active');
             listModal.classList.remove('show');
           }, 3000);
+        });
+
+        saveAndGo.addEventListener('click', () => {
+          window.location.href = `shopping-list.html?id=${el.id}`;
         });
 
         cancel.addEventListener('click', () => {
