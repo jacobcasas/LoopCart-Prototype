@@ -14,7 +14,7 @@ export const products = [
         title: "Strawberry Pack",
         img: "src/imgs/strawberries.jpeg",
         source: "Charmington Farms",
-        price: 3.50,
+        price: 3.00,
         discount: "",
         color: "mint",
         size: "2 oz"
@@ -78,6 +78,46 @@ export const products = [
         discount: "",
         color: "mint",
         size: "1 gal"
+    },
+    {
+        id: 9,
+        title:"Rose Wine",
+        img: "src/imgs/rose-wine.jpg",
+        source: "Lovely Winery",
+        price: 7.99,
+        discount: "10.00",
+        color: "mushroom",
+        size: "1 btl"
+    },
+    {
+        id: 10,
+        title: "Blackberry Pack",
+        img: "src/imgs/blackberries.jpg",
+        source: "Charmington Farms",
+        price: 2.50,
+        discount: "",
+        color: "mint",
+        size: "2 oz"
+    },
+    {
+        id: 11,
+        title: "Oatmilk Creamer",
+        img: "src/imgs/oatmilk-creamer.jpg",
+        source: "Dairy Market",
+        price: 4.50,
+        discount: "",
+        color: "mint",
+        size: "1/2 gal"
+    },
+    {
+        id: 12,
+        title: "Lavender Hand Soap",
+        img: "src/imgs/lavender-handsoap.jpg",
+        source: "Genesis",
+        price: 6.50,
+        discount: "",
+        color: "blueberry",
+        size: "7.5 fl oz"
     }
 ]
 

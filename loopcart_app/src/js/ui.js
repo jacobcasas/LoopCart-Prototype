@@ -89,6 +89,12 @@ document.querySelectorAll('.shopping-list-card').forEach(card => {
   });
 });
 
+document.querySelectorAll('.notification-card-img').forEach(card => {
+  card.addEventListener('click', () => {
+    navigateToPage(card.dataset.id, 'product');
+  })
+})
+
 document.addEventListener("DOMContentLoaded", () => {
   const backButton = document.querySelector(".back-button");
 
