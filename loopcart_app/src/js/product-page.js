@@ -11,22 +11,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("product-details");
 
   if (product) {
-    container.innerHTML = `
-      <img src="${product.img}" alt="${product.title}" class="product-img">
-      <div class="product-content">
-        <div class="title-and-size">
-          <h3 class="${product.color} product-title">${product.title}</h3>
-          <p class="small-text">${product.size}</p>
-        </div>
-        <div class="price-and-source">
-            <div class="price">
-                <h6 class="guava">$${product.price.toFixed(2)}</h6>
-                <p class="xs-text discount">${product.discount}</p>
-             </div>
-            <p class="boldest gray-600">${product.source}</p>
-        </div>
-      </div>
-    `;
+    fetch(`src/descriptions/description${productId}.txt`)
+      .then(response => response.text())
+      .then (descriptionText => {
+        container.innerHTML = `
+          <div class="product-container">
+            <img src="${product.img}" alt="${product.title}" class="product-img">
+            <div class="product-content">
+              <div class="title-and-size">
+                <h3 class="${product.color} product-title">${product.title}</h3>
+                <p class="small-text">${product.size}</p>
+              </div>
+              <div class="price-and-source">
+                  <div class="price">
+                      <h6 class="guava">$${product.price.toFixed(2)}</h6>
+                      <p class="xs-text discount">${product.discount}</p>
+                    </div>
+                  <p class="boldest gray-600">${product.source}</p>
+              </div>
+            </div>
+          </div>
+          <div class="description-container">
+            <h4 class="underline bolder gray-800">Addition Information</h4>
+            <div id="product-description" class="description-content">
+              <p>${descriptionText}</p>
+            </div>
+            <button id="toggle-description" class="show-more-btn">Show More</button>
+          </div>
+        `;
+        const descriptionContainer = document.getElementById('product-description');
+        const toggleButton = document.getElementById('toggle-description');
+    
+        toggleButton.addEventListener('click', () => {
+          const isExpanded = descriptionContainer.classList.contains('show');
+    
+          descriptionContainer.classList.toggle('show');
+          toggleButton.textContent = isExpanded ? "Show More" : "Show Less";
+        });
+      });
+
 
   //quantity controller
     const controller = document.getElementById("quantity");

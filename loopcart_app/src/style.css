@@ -224,6 +224,10 @@ hr {
     font-weight: 900;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .cta-button-primary {
     width: fit-content;
     height: fit-content;
@@ -887,10 +891,14 @@ hr {
 }
 
 #product-details {
-    max-height: 196px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--spacing-2);
+}
+
+.product-container {
+    display: flex;
+    gap: var(--spacing-1);
 }
 
 .product-title {
@@ -919,6 +927,29 @@ hr {
 
 .discount {
     text-decoration: line-through;
+}
+
+/* Additional Information - Description */
+.description-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.description-content.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  margin: 0 auto;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.5rem;
 }
 
 .quantity-container {
